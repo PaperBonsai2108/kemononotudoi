@@ -11,10 +11,6 @@
   float: left;
 }
 
-.clear {
-  clear: both;
-}
-
 .header-left a {
   line-height: 56px;
   color: white;

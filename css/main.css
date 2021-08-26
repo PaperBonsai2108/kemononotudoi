@@ -1,4 +1,8 @@
-* {
+.contents {
   background-color: white;
+  font-family: '07ラノベPOP','Corporate Logo ver2','UD デジタル 教科書体 NK-B';
+}
+
+.header {
   font-family: '07ラノベPOP','Corporate Logo ver2','UD デジタル 教科書体 NK-B';
 }

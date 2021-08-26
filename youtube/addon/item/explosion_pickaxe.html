@@ -44,6 +44,7 @@
           <div class="how-to-make">
             <h2>How To Make</h2>
             <h3>コード紹介</h3>
+		  <h4>B/items</h4>
             <pre class="line-numbers">
 	<code class="language-javascript">
 	{
@@ -147,6 +148,40 @@
                     }
                 ]
             }
+        }
+    }
+}
+	</code>
+</pre>
+		  <h4>B/recipes</h4>
+		  <pre class="line-numbers">
+	<code class="language-javascript">
+	{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "course:explosion_pickaxe"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "III",
+            "TST",
+            " S "
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
+            "T": {
+                "item": "minecraft:tnt"
+            },
+            "S": {
+                "item": "minecraft:stick"
+            }
+        },
+        "result": {
+            "item": "course:explosion_pickaxe",
+            "count": 1
         }
     }
 }

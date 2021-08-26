@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/css/heading.css">
     <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/css/button.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <head>
+	  <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemono/css/prism.css">
+	  <script type="text/javascript" href="https://PaperBonsai2108.github.io/kemono/js/prism.js"></script>
+</head>
   </head>
   <body>
     <div class="header">
@@ -40,6 +44,114 @@
           <div class="how-to-make">
             <h2>How To Make</h2>
             <h3>コード紹介</h3>
+            <pre class="line-numbers">
+	<code class="language-javascript">
+	{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "course:explosion_pickaxe",
+            "category": "Equipment"
+        },
+        "components": {
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.pickaxe"
+            },
+            "minecraft:foil": true,
+            "minecraft:hand_equipped": true,
+            "minecraft:explodable": false,
+            "minecraft:max_stack_size": 1,
+            "minecraft:durability": {
+                "max_durability": 100
+            },
+            "minecraft:repairable": {
+                "repair_items": [
+                    {
+                        "items": ["minecraft:iron_ingot"],
+                        "repair_amount": 50
+                    }
+                ]
+            },
+            "minecraft:enchantable": {
+                "value": 100,
+                "slot": "pickaxe"
+            },
+            "minecraft:damage": 3,
+            "minecraft:mining_speed": 100,
+            "minecraft:digger": {
+                "use_efficiency": true,
+                "on_dig": {
+                    "condition": "query.get_equipped_item_name('off_hand') == 'arrow'",
+                    "event": "course:on_dig_event",
+                    "target": "self"
+                }
+            },
+            "minecraft:display_name": {
+                "value": "鉄のツルハシ？"
+            },
+            "minecraft:icon": {
+                "texture": "pickaxe",
+                "frame": 2
+            }
+        },
+        "events": {
+            "course:on_dig_event": {
+                "sequence": [
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon ender_crystal ^ ^ ^ minecraft:crystal_explode"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon ender_crystal ^ ^ ^1 minecraft:crystal_explode"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon ender_crystal ^ ^ ^2 minecraft:crystal_explode"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon ender_crystal ^ ^ ^3 minecraft:crystal_explode"
+                            ]
+                        }
+                    },
+                    {
+                        "run_command": {
+                            "command": [
+                                "summon ender_crystal ^ ^ ^4 minecraft:crystal_explode"
+                            ]
+                        }
+                    },
+	                {
+                        "run_command": {
+                            "command": [
+                                "summon ender_crystal ^ ^ ^5 minecraft:crystal_explode"
+                            ]
+                        }
+                    },
+                    {
+                        "damage": {
+                            "type": "magic",
+                            "amount": 1
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+	</code>
+</pre>
             <h3>これはなんなの？</h3>
           </div>
         </div>

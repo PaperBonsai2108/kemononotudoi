@@ -188,6 +188,18 @@
 	</code>
 </pre>
             <h3>これはなんなの？</h3>
+		              <pre>
+	<code class="language-js">
+  "minecraft:digger": {
+                "use_efficiency": true,
+                "on_dig": {
+                    "condition": "query.get_equipped_item_name('off_hand') == 'arrow'",
+                    "event": "course:on_dig_event",
+                    "target": "self"
+                }
+            },
+  </code>
+  </pre>
       </div>
     </div>
   </body>

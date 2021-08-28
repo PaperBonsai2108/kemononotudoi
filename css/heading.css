@@ -9,6 +9,37 @@
   border-bottom: double 5px #FFC778;
 }
 
+h3 {
+  position: relative;
+  background: #ffd98a;
+  padding: 2px 5px 2px 25px;
+  font-size: 20px;
+  color: #474747;
+  border-radius: 0 10px 10px 0;
+}
+
+h3:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f135";
+  display: inline-block;
+  line-height: 40px;
+  position: absolute;
+  padding: 0em;
+  color: white;
+  background: #ffa337;
+  font-weight: 900;
+  width: 40px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  left: -1.35em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: solid 3px white; 
+  border-radius: 50%;
+}
+
 .contents h4 {
   position: relative;
   padding: 0.25em 0;

@@ -1,0 +1,113 @@
+<!DOCTYPE>
+<html lang="ja">
+  <head>
+    <title>Explosion Pickaxe</title>
+    <meta charset="utf-8">
+    <meta name="description"  content="Youtubeで紹介したエンティティの追加方法を紹介します。ぜひゆっくりしていってね">
+    <link rel="shortcut icon" href="https://PaperBonsai2108.github.io/kemononotudoi/image/logo (2).png">
+    <meta property="og:title" content="Normal Entity">
+    <meta property="og:site_name" content="KemononoTudoi">
+    <meta property="og:desctiption" content="Youtubeで紹介したエンティティの追加方法を紹介します。ぜひゆっくりしていってね">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://PaperBonsai2108.github.io/kemononotudoi/youtube/addon/entity/normal/">
+    <meta property="og:image" content="https://PaperBonsai2108.github.io/kemononotudoi/image/logo (2).png">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@kts_mcpack">
+    <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/css/header.css">
+    <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/css/main.css">
+    <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/css/heading.css">
+    <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/css/button.css">
+	  <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/css/contents.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://PaperBonsai2108.github.io/kemononotudoi/lib/css/prism.css">
+	  <script src="https://PaperBonsai2108.github.io/kemononotudoi/lib/js/prism.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <a href="#">KemonoT</a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#">YouTube</a>
+        <a href="#">Download</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="clear"></div>
+	  </div>
+        <div class="contents">
+          <div class="title">
+            <h1>Normal Entity～基本を知ろう!!～</h1>
+          </div>
+          <div class="youtube">
+            <h2>解説動画(YouTube)</h2>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/f23kj-sEyXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="how-to-make">
+            <h2>How To Make</h2>
+            <h3>コード紹介</h3>
+		  <h4>B/entities/sample_entity.json</h4>
+            <pre>
+	<code class="language-js">
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "sample:sample_entity",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+
+        "component_groups": {
+
+        },
+        "components": {
+            "minecraft:physics": {}
+        },
+        "events": {
+
+        }
+    }
+}
+	</code>
+</pre>
+		  <h4>R/entity/sample_entity.json</h4>
+		  <pre>
+	<code class="language-js">
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "sample:sample_entity",
+            "materials": { "default": "skeleton" },
+            "textures": {
+                "default": "textures/entity/sample_entity"
+            },
+            "geometry": {
+                "default": "geometry.custom"
+            },
+            "render_controllers": [ "controller.render.default" ],
+            "spawn_egg": {
+                "base_color": "#fff",
+                "overlay_color": "#000"
+            },
+            "particle_effects": {
+                "sample_effect": "minecraft:nectar_drip_particle"
+            },
+            "enable_attachables": true
+        }
+    }
+}
+	</code>
+</pre>
+            <h4>R/texts/ja_JP.lang</h4>
+		  <pre>
+	<code class="language-js">
+
+item.spawn_egg.entity.sample:sample_entity.name=エンティティのスポーンエッグ
+entity.sample:sample_entity.name=エンティティの名前
+	</code>
+</pre>
+      </div>
+    </div>
+  </body>
+</html>
